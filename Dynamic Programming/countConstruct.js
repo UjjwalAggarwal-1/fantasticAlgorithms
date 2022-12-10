@@ -1,0 +1,2 @@
+// count of canConstruct possibilities
+
