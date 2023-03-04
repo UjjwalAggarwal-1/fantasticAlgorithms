@@ -25,11 +25,11 @@ int main(){
         p1,p2,p3,p4,p5
     };
     for (int i=0;i<5;i++){
-        printf("%d ", arr[i].id);
+        printf("%d %s %d \n", arr[i].id, arr[i].name, arr[i].height);
     }printf("\n");
     func(arr, 5);
     for (int i=0;i<5;i++){
-        printf("%d ", arr[i].id);
+        printf("%d %s %d \n", arr[i].id, arr[i].name, arr[i].height);
     }printf("\n");
     return 1;
 }

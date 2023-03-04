@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-void insertionSort(int A[], int n){
-    for(int j=1;j<n;j++){
-        insertInOrder(A[j],A,j);
-    }
-}
-
 void insertInOrder(int aj, int A[], int j){
     // for (int i =j-1; i>=0; i--){
     //     if (A[i]>A[i+1]) {
@@ -20,4 +14,10 @@ void insertInOrder(int aj, int A[], int j){
         i--;
     }
     A[i+1]=aj;
+}
+
+void insertionSort(int A[], int n){
+    for(int j=1;j<n;j++){
+        insertInOrder(A[j],A,j);
+    }
 }
