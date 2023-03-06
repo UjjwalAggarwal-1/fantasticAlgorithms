@@ -85,7 +85,7 @@ int main(){
         strcat(filename,".csv");
         printf("%s\n",filename);
         FILE *f2 = fopen(filename, "w");
-        if (f2 == NULL){printf("Error opening file2");return 1;}
+        if (f2 == NULL){printf("Error opening file2\n");return 1;}
 
         int actual = 0;
         person arr[N];
@@ -105,5 +105,23 @@ int main(){
         fclose(f2);
     }
     fclose(f1);
+
+    // ---
+
+    FILE *f1 = fopen("op/sorted.csv", "r+");
+    if (f1 == NULL){printf("Error opening file");return 1;}
+    printf("starting merge")
+    for (int c2 = 1;c2<=count;c2++){
+        char filename[15] = "op/sorted";
+        char ind[3] ;
+        sprintf(ind,"%d",c2);
+        strcat(filename,ind);
+        strcat(filename,".csv");
+        printf("%s\n",filename);
+
+        
+
+    }
+    
     return 0;
 }

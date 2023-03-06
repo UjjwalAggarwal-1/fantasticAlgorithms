@@ -13,10 +13,10 @@ int main(){
     exit(1);
     }
     int i = 0;
-    char str1[20];
+    char str1[200];
     char hobbit[6] = "hobbit";
     int flag = 0;
-    while(fscanf(fptr, "%s ", str1)==1){
+    while(fscanf(fptr, "%s", str1)==1){
 
         //useful things
         // printf("%d %s \n",i, str1);
@@ -28,12 +28,11 @@ int main(){
         flag = 0;
         
         if (strlen(str1) == 6 ){
-        for (int k = 0;k<6;k++){
-            if(!((char)tolower(str1[k])==hobbit[k])){
-                flag = 1;break;
+            for (int k = 0;k<6;k++){
+                if(!((char)tolower(str1[k])==hobbit[k])){
+                    flag = 1;break;
+                }
             }
-        }
-        if (!flag) i++;
         }else{
         for (int k = 0;k<strlen(str1)-5;k++){
             char c = str1[k];

@@ -58,6 +58,7 @@ void delete_at_i(Hotel h, int iks){
         strcpy((h->occupants+i)->address, (h->occupants+i+1)->address);
     }
     h->no_occupied_rooms--;
+    h->occupants = realloc(h->occupants, (h->no_occupied_rooms)*sizeof(struct occupant));
 }
 
 int main(){
@@ -97,7 +98,7 @@ int main(){
     assign_first(h,&o3);
     assign_first(h,&o3);
     for (int i =0;i<h->no_occupied_rooms;i++) printf("%d %s %d\n",i, (h->occupants+i)->name, (h->occupants[i]).age);
-    printf("\n");
+    printf("dee\n");
     
     delete_at_i(h, 2);
     delete_at_i(h, 2);
