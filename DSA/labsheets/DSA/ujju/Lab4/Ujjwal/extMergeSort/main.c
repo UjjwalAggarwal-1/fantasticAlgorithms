@@ -110,8 +110,8 @@ int main(){
 
     FILE *f1 = fopen("op/sorted.csv", "r+");
     if (f1 == NULL){printf("Error opening file");return 1;}
-    printf("starting merge")
-    for (int c2 = 1;c2<=count;c2++){
+    printf("starting merge");
+    for (int c2 = 1; c2<=count; c2++){
         char filename[15] = "op/sorted";
         char ind[3] ;
         sprintf(ind,"%d",c2);
